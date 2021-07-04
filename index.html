@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            Project 78
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            Heads of Countries
+        </h1>
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/220px-Joe_Biden_presidential_portrait.jpg">
+        <h2 id="country">
+            America
+        </h2>
+        <h3 id="nameofpeople">
+            Joe Biden
+        </h3>
+        <button type = "button" id = "button" onclick="button()">
+            Change Person
+        </button>
+        <script>
+            var names = [
+                "Queen Elizabeth II",
+                "Emmanuel Macron",
+                "Sergio Mattarella",
+                "Vladimir Putin",
+                "Ram Nath Kovind",
+                "Xi Jinping",
+                "Jair Bolsonaro",
+                "Joe Biden"
+            ];
+            var countries = [
+                "United Kingdom",
+                "France",
+                "Italy",
+                "Russia",
+                "India",
+                "Egypt",
+                "Brazil",
+                "America"
+            ];
+            var images = [
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Queen_Elizabeth_II_in_March_2015.jpg/220px-Queen_Elizabeth_II_in_March_2015.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Emmanuel_Macron_%28cropped%29.jpg/220px-Emmanuel_Macron_%28cropped%29.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Presidente_Sergio_Mattarella.jpg/220px-Presidente_Sergio_Mattarella.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Vladimir_Putin_%282018-03-01%29_03_%28cropped%29.jpg/220px-Vladimir_Putin_%282018-03-01%29_03_%28cropped%29.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Ram_Nath_Kovind_official_portrait%2C_2017.jpg/220px-Ram_Nath_Kovind_official_portrait%2C_2017.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Xi_Jinping_2019.jpg/448px-Xi_Jinping_2019.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/2020-03-24_Pronunciamento_do_Presidente_da_Rep%C3%BAblica%2C_Jair_Bolsonaro_em_Rede_Nacional_de_R%C3%A1dio_e_Televis%C3%A3o_-_49695919452_%28cropped_2%29.jpg/220px-2020-03-24_Pronunciamento_do_Presidente_da_Rep%C3%BAblica%2C_Jair_Bolsonaro_em_Rede_Nacional_de_R%C3%A1dio_e_Televis%C3%A3o_-_49695919452_%28cropped_2%29.jpg",
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/220px-Joe_Biden_presidential_portrait.jpg"
+            ];
+            var i = 0;
+            console.log(names);
+            function button() {
+
+                i++;
+                var numberofitems = 7;
+                if (i > numberofitems) {
+                    i = 0;
+                }
+                var newimage = images[i];
+                var newcountries = countries[i];
+                var newname = names[i];                
+                document.getElementById("image").src = newimage;
+                document.getElementById("country").innerHTML = newcountries;
+                document.getElementById('nameofpeople').innerHTML = newname;
+                }
+            </script>
+            </body>
+            </html>
